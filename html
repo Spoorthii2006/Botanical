@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Botanical Garden Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Login</h2>
+    <form action="login" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Sign In</button>
+    </form>
+    <p>Don't have an account? <a href="register.html">Register</a></p>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Create Account</h2>
+    <form action="register" method="post">
+        <input type="email" name="email" placeholder="Email" required><br>
+        <input type="password" name="password" placeholder="Password" required><br>
+        <button type="submit">Register</button>
+    </form>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome to Botanical Garden System</h2>
+
+    <a href="addPlant.html" class="btn">Add Plant</a>
+    <a href="viewPlants" class="btn">View Plants</a>
+    <a href="bookTickets.html" class="btn">Book Tickets</a>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Plant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+<h2>Add New Plant</h2>
+
+<form action="addPlant" method="post" enctype="multipart/form-data">
+    <input type="text" name="name" placeholder="Species Name" required><br>
+    <input type="date" name="date" required><br>
+    <textarea name="desc" placeholder="Description"></textarea><br>
+
+    <label>Plant Photo:</label>
+    <input type="file" name="image" accept="image/*" required><br>
+
+    <label>3D Model (.glb):</label>
+    <input type="file" name="model"><br>
+
+    <button type="submit">Save Plant</button>
+</form>
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Plant Collection</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <h2>Plant Collection</h2>
+
+    <!-- Java will inject plant data here -->
+    <div id="plant-list">
+        <!-- Example plant card -->
+        <!-- Replace with Java backend loop -->
+    </div>
+
+</div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Tickets</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h2>Book Garden Ticket</h2>
+
+    <form action="bookTicket" method="post">
+        <input type="date" name="visitDate" required><br>
+        <input type="number" name="tickets" placeholder="Number of Tickets" min="1" required><br>
+        <button type="submit">Book Now</button>
+    </form>
+</div>
+</body>
+</html>
